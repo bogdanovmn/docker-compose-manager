@@ -1,0 +1,3 @@
+backend    /root/path/to/backend/docker-compose.yaml
+frontend   /root/path/to/front/docker-compose.yaml
+monitoring /root/path/to/monitoring/docker-compose.yaml
