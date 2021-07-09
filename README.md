@@ -7,6 +7,11 @@ A simple tool for managing multiple docker-compose configuration
 All you need is just specify docker-compose configs and their aliases 
 You can find an example in the example dir. The default config name is DCMfile. Also, you can specify it using command line argument
 
+## Adding the script in your PATH
+```bash
+export PATH="/path/to/dcm/bin:$PATH"
+```
+
 # Examples
 
 ## Config
@@ -17,21 +22,21 @@ monitoring /root/path/to/monitoring/docker-compose.yaml
 ```
 
 ## Up everything
-```
-./dcm.py -a up
+```bash
+$ dcm -a up
 ```
 
-## Figuring out services names
+## Figuring out all service names
 ```
-./dcm.py -a config
+$ dcm -a config
 ```
 
 ## Execute a command inside a service container
 ```
-./dcm.py -t backend -a exec -o "service-from-backend sh"
+$ dcm -t backend -a exec -o "service-from-backend sh"
 ```
 
-## Show logs for all services in frontend
+## Show logs for all services in the "frontend" configuration
 ```
-./dcm.py -t frontend -a logs
+$ dcm -t frontend -a logs
 ```
